@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+gtts
+requests
+python-dotenv
+adobe-pdfservices-sdk 
+pydantic
+transformers 
+torch
+cleantext
+gtts

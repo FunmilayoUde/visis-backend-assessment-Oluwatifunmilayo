@@ -17,10 +17,10 @@ logging.basicConfig(
     format="%(asctime)s %(levelname)s %(message)s",
     datefmt="%m/%d/%Y %I:%M:%S",
 )
-
-path = r'C:\Users\Chimdi\Downloads\Sight'
-model = AutoModelForSeq2SeqLM.from_pretrained(path)
-tokenizer = AutoTokenizer.from_pretrained(path)
+model_path = os.path.join(os.path.dirname(__file__), 'fine_tuned_model')
+# Load the fine-tuned model and tokenizer
+model = AutoModelForSeq2SeqLM.from_pretrained(model_path)
+tokenizer = AutoTokenizer.from_pretrained(model_path)
 token_batch_length = 2048 
 batch_stride = 20
 
